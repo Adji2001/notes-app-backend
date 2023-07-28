@@ -1,30 +1,28 @@
-import { addNoteHandler, deleteNoteById, getAllNotes, getNoteById, updateNoteById } from './handler.js'
-
-const routes = [
+const routes = (handler) => [
     {
         method: 'POST',
         path: '/notes',
-        handler: addNoteHandler
+        handler: handler.postNoteHandler
     },
     {
         method: 'GET',
         path: '/notes',
-        handler: getAllNotes
+        handler: handler.getNotesHandler
     },
     {
         method: 'GET',
         path: '/notes/{id}',
-        handler: getNoteById
+        handler: handler.getNoteByIdHandler
     },
     {
         method: 'PUT',
         path: '/notes/{id}',
-        handler: updateNoteById
+        handler: handler.putNoteByIdHandler
     },
     {
         method: 'DELETE',
         path: '/notes/{id}',
-        handler: deleteNoteById
+        handler: handler.deleteNoteByIdHandler
     }
 ]
 
