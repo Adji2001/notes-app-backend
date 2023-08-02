@@ -1,7 +1,7 @@
-import NotesHandler from './handler.js'
-import routes from './routes.js'
+const NotesHandler = require('./handler.js')
+const routes = require('./routes.js')
 
-export default {
+module.exports = {
     name: 'notes',
     version: '1.0.0',
     register: async (server, { service, validator }) => {

@@ -1,4 +1,4 @@
-import Joi from 'joi'
+const Joi = require('joi')
 
 const NotePayloadSchema = Joi.object({
     title: Joi.string().required(),
@@ -6,4 +6,4 @@ const NotePayloadSchema = Joi.object({
     tags: Joi.array().items(Joi.string()).required()
 })
 
-export { NotePayloadSchema }
+module.exports = { NotePayloadSchema }
